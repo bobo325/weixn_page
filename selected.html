@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>check box</title>
+	<script src="./vue.js"></script>
+</head>
+<body>
+	 <div id="app">
+	 	<select name="fruit" v-model="selected">
+			<option value="">选择一个网站</option>
+			<option value="www.google.com">谷歌</option>
+			<option value="www.firefox.com">火狐</option>
+	 	</select>
+
+	 	<div id="output">
+			选择的网站是：<a href="{{ selected }}">{{ selected }}</a>
+	 	</div>
+	</div>
+	<script>
+		new Vue({
+		  el: '#app',
+		  data: {
+			selected:''
+		  }
+		})
+	</script>
+
+</body>
+</html>
