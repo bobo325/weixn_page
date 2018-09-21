@@ -28,8 +28,40 @@
 	margin-left: -190px;
 	/*margin: 10% auto;*/
 	position: absolute;
-	width: 380px;
-	height: 540px;
+	width: 350px;
+	height: 560px;
 	border: 0.1px none;
 	background-color: white;
+	background-image: url("wx_earth.jpg");
+	background-size: 100% 100%;
 }
+
+#login_in {
+	width: 300px;
+	height: 320px;
+	margin-top: 50px;
+	margin-left: 40px;
+	border: 2px inherit;
+	border-radius: 20px;
+	/*background-color: #C0C0C0;*/
+}
+
+#form {
+	margin-left: 50px;
+	margin-top: 20px;
+}
+
+.span {
+	font-size: 15px;
+	color: #6C6C6C;
+}
+
+.input {
+	width: 200px;
+	height: 30px;
+	margin-top: 8px;
+	border: 2px outset #ADADAD;
+	border-radius: 8px;
+	font-size: 10px;
+}
+
