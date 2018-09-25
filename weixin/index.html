@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>微信手机网页版</title>
+	<title>微信网页版</title>
+	<meta name="keywords" content="WeChat網頁版,weixin web,wechat,WeChat pc,WeChat電腦版,wechat web,WeChat web,WeChat電腦">
 	<script type="text/javascript" src="vue.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="https://res.wx.qq.com/a/wx_fed/assets/res/NTI4MWU5.ico">
+	<script type="text/javascript" src="./vue.js"></script>
+	<script type="text/javascript" src="./jquery-3.2.1.js"></script>
 </head>
-<body>
+<body id="body">
 	<!-- 最外层div -->
 	<div id="frame">
 
@@ -14,34 +18,83 @@
 		<div id="icon">
 		</div>
 
+		<!-- 文字说明 -->
+		<div id="description">
+		没带手机? 您可以通过用户名和密码进行登录~
+		</div>
 		<!-- 登录div -->
 		<div id="login">
 			<!-- 表单部分 -->
 			<div id="login_in">
 				<form action="login" method="post" id="form">
 					<label for="username">
-						<span class="span"><b>用户名：</b></span>
+						<span class="span1"><b>用户名：</b></span>
 					</label><br>
 					<input type="text" name="username" id="username" class="input" placeholder="微信号/QQ/手机号" required="required"><br><br>
 					<label for="password">
-						<span class="span"><b>密&nbsp;&nbsp;&nbsp;码：</b></span>
+						<span class="span2"><b>密 码：</b></span>
 					</label><br>
 					<input type="password" name="password" id="password" class="input" placeholder="请输入密码" required="required">
 				</form>
 			</div>
-			
-			<!-- 文字说明部分 -->
-			<div id="tips">
-				<div id="tip_one">
-					
-				</div>
-
-				<div id="tip_two">
-					
-				</div>
-			</div>
+		</div>
+		<!-- 左下角切换 -->
+		<div >
+			<ul id="dialect">
+				<li class="li">
+					<a href="http://weixin.qq.com/cgi-bin/readtemplate?t=win_weixin&amp;platform=wx&amp;lang=en_US" target="_blank">WeChat for Windows</a>
+				</li>
+				<li class="li">|</li>
+				<li class="li">
+					<router-link to="/jianti">
+						<span class="jianti">简体中文</span>
+					</router-link>
+				</li>
+				<li class="li">|</li>
+				<li class="li">
+				<router-link to="/fanti">
+					<span class="fanti">繁體中文</span>
+				</router-link>
+				</li>
+				<li class="li">|</li>
+				<li class="li">
+					<router-link to="/english">
+						<span class="english">English</span>
+					</router-link>
+				</li>
+			</ul>
 		</div>
 
+		<!-- 右下角声明！ -->
+		<div id="copyright">
+			© 1998 - 2018 Tencent Inc. All Rights Reserved
+		</div>
 	</div>
+<script type="text/javascript">
+	//转换成繁体字
+	$(".fanti").click(function(){
+		$("#description").text("沒帶手機? 您可以通過用戶名和密碼進行登錄~");
+		$(".span1").text("用護名:");
+		$(".span2").text("密 碼:");
+		$("#username").attr("placeholder","微信號/QQ/手機號");
+		$("#password").attr("placeholder","請輸入密碼");
+	});
+	//转换成简体字
+	$(".jianti").click(function(){
+		$("#description").text("没带手机? 您可以通过用户名和密码进行登录~");
+		$(".span1").text("用户名:");
+		$(".span2").text("密 码:");
+		$("#username").attr("placeholder","微信号/QQ/手机号");
+		$("#password").attr("placeholder","请输入密码");
+	});
+	//转换成英语
+	$(".english").click(function(){
+		$("#description").text("Without a phone? You can log in by username and password~");
+		$(".span1").text("username:");
+		$(".span2").text("password:");
+		$("#username").attr("placeholder","weixin/QQ/phone");
+		$("#password").attr("placeholder","please enter your password");
+	});
+</script>
 </body>
 </html>
