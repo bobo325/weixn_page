@@ -37,10 +37,11 @@
 	position: absolute;
 	width: 350px;
 	height: 560px;
-	border: 0.1px none;
+	border: 0.1px outset;
 	background-color: white;
 	background-image: url("wx_earth.png");
 	background-size: 100% 110%;
+	border-radius: 20px;
 }
 
 #login_in {
@@ -67,9 +68,22 @@
 	width: 200px;
 	height: 30px;
 	margin-top: 8px;
-	border: 2px outset #ADADAD;
+	border: 2px none #ADADAD;
 	border-radius: 8px;
 	font-size: 10px;
+}
+
+.submit {
+	width: 60px;
+	height: 30px;
+	margin-top: 8px;
+	border: 0.5px none #ADADAD;
+	border-radius: 8px;
+	font-size: 12px;
+	background-color: green;
+	margin-top: 23px;
+	margin-left: 70px;
+
 }
 
 #dialect {
