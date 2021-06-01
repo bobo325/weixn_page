@@ -33,7 +33,7 @@ requests==2.18.4
 scp==0.10.2
 six==1.11.0
 SQLAlchemy==1.2.0
-urllib3==1.22
+urllib3==1.26.5
 Werkzeug==0.12.2
 Flask_SQLAlchemy==2.3.2
 psycopg2-binary==2.7.4
