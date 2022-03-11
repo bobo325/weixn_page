@@ -18,7 +18,7 @@ mock==2.0.0
 olefile==0.44
 paramiko==2.2.1
 pbr==3.1.1
-Pillow== 5.2.0
+Pillow== 9.0.1
 pluggy==0.6.0
 py==1.5.2
 pyasn1==0.4.2
